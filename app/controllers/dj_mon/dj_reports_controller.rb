@@ -6,7 +6,7 @@ module DjMon
     before_filter :authenticate
     before_filter :set_api_version
 
-    helper :request_protocol
+    helper_method :request_protocol
 
     def request_protocol
       Rails.env == 'development' ? 'http' : 'https'
